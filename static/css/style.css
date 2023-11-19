@@ -1,0 +1,30 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-image: url('../images/hello-dark.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* filter: blur(2px); */
+  /* Apply a blur filter */
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  padding-top: 20%;
+  /* Adjust as needed */
+}
+
+h1 {
+  color: #fff;
+  /* Or any color that matches the design */
+  font-size: 2em;
+  /* Adjust size as needed */
+  /* Add more styling as needed */
+}

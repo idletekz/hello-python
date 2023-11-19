@@ -1,0 +1,5 @@
+##
+pip install python-dotenv
+
+## .env
+FF_API_KEY
