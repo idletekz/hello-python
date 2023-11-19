@@ -1,5 +1,8 @@
 ##
 pip install python-dotenv
+pip install --upgrade flask
+pip install --upgrade jinja2
+pip install harness-featureflags
 
 ## .env
 FF_API_KEY
