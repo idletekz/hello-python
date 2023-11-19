@@ -3,13 +3,24 @@
 
 <head>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <script>
+    function fetchMessage() {
+      fetch('/get-message')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('message').textContent = data.message;
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    // Poll every 5 seconds (5000 milliseconds)
+    setInterval(fetchMessage, 5000);
+  </script>
 </head>
 
 <body>
-  <div class="content">
-    <h1>{{ message }}</h1>
-    <!-- Add more content here as needed -->
-  </div>
+  <h1 id="message">{{ message }}</h1>
+  <!-- Add more content here as needed -->
 </body>
 
 </html>

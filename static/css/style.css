@@ -14,6 +14,11 @@ body {
   /* Apply a blur filter */
 }
 
+#message {
+  text-align: center;
+  /* Other styles */
+}
+
 .content {
   position: relative;
   text-align: center;
