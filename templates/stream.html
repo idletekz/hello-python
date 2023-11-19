@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- Script for handling Server-Sent Events (SSE) -->
+  <script>
+    // Check if the browser supports EventSource (SSE)
+    if (!!window.EventSource) {
+      // Establish a connection to the server for receiving events
+      var source = new EventSource('/message-stream');
+
+      // Event handler for receiving messages
+      source.onmessage = function (event) {
+        // Update the text of the element with id 'message' with the received data
+        document.getElementById('message').textContent = event.data;
+      };
+    }
+  </script>
+</head>
+
+<body>
+  <h1 id="message">{{ message }}</h1>
+  <!-- Add more content here as needed -->
+</body>
+
+</html>
